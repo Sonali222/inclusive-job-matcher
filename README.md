@@ -55,7 +55,7 @@ The system is organized into the following layers:
 - **Infrastructure (future)**: AWS (Lambda, RDS, S3)  
 - **Other Tools**: Pandas, GitHub for version control  
 
-## Project Structure & Getting Started
+## Project Structure
 
 ```text
 inclusive-job-matcher/
@@ -69,25 +69,7 @@ inclusive-job-matcher/
 └── data/                  # Job dataset (ignored in git)
 
 
-# Getting Started
-
-1. Clone the repository
-   git clone https://github.com/Sonali222/inclusive-job-matcher.git
-   cd inclusive-job-matcher
-
-2. Create a virtual environment (recommended)
-   python3 -m venv venv
-   source venv/bin/activate   # On Mac/Linux
-   venv\Scripts\activate      # On Windows
-
-3. Install dependencies
-   pip install -r requirements.txt
-
-4. Run the application
-   streamlit run Home.py
-
-5. (Optional) Add your API keys to .streamlit/secrets.toml
-
+# Getting started
 
 
 
