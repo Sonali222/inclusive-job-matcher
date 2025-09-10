@@ -55,7 +55,7 @@ The system is organized into the following layers:
 - **Infrastructure (future)**: AWS (Lambda, RDS, S3)  
 - **Other Tools**: Pandas, GitHub for version control  
 
-## Project Structure
+## Project Structure & Getting Started
 
 ```text
 inclusive-job-matcher/
@@ -68,19 +68,26 @@ inclusive-job-matcher/
 ├── README.md              # Documentation
 └── data/                  # Job dataset (ignored in git)
 
-## Future Enhancements
 
-1. Integration with live job APIs (LinkedIn, Indeed, etc.)  
-2. Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud  
-3. Employer "Inclusivity Score" ranking system  
-4. Cover letter generator powered by Gemini  
+# Getting Started
 
-## About the Author
+1. Clone the repository
+   git clone https://github.com/Sonali222/inclusive-job-matcher.git
+   cd inclusive-job-matcher
 
-**Sonali Chandra**  
-- MS in Management Information Systems, University of Illinois Chicago (2025)  
-- Background: Data Engineering, Healthcare IT, Inclusive Technology  
-- [LinkedIn](https://www.linkedin.com/in/sonalichandra) | [GitHub](https://github.com/Sonali222)  
+2. Create a virtual environment (recommended)
+   python3 -m venv venv
+   source venv/bin/activate   # On Mac/Linux
+   venv\Scripts\activate      # On Windows
+
+3. Install dependencies
+   pip install -r requirements.txt
+
+4. Run the application
+   streamlit run Home.py
+
+5. (Optional) Add your API keys to .streamlit/secrets.toml
+
 
 
 
