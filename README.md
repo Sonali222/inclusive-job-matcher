@@ -69,7 +69,7 @@ inclusive-job-matcher/
 └── data/                  # Job dataset (ignored in git)
 
 
-# Getting started
+## Getting started
 
 
 
