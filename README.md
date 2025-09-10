@@ -86,14 +86,11 @@ Run the application
 streamlit run Home.py
 (Optional) Add your API keys to .streamlit/secrets.toml.
 
-Future Enhancements
+## Future Enhancements
+- Integration with live job APIs (LinkedIn, Indeed, etc.)  
+- Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud  
+- Employer "Inclusivity Score" ranking system  
+- Cover letter generator powered by Gemini  
 
-Integration with live job APIs (LinkedIn, Indeed, etc.)
-
-Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud
-
-Employer Inclusivity Score ranking system
-
-Cover letter generator powered by Gemini
 
 
