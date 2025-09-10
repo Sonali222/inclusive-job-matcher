@@ -68,8 +68,19 @@ inclusive-job-matcher/
 ├── README.md              # Documentation
 └── data/                  # Job dataset (ignored in git)
 
-## Getting Started
+## Future Enhancements
 
-1. Clone the repository 
+1. Integration with live job APIs (LinkedIn, Indeed, etc.)  
+2. Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud  
+3. Employer "Inclusivity Score" ranking system  
+4. Cover letter generator powered by Gemini  
+
+## About the Author
+
+**Sonali Chandra**  
+- MS in Management Information Systems, University of Illinois Chicago (2025)  
+- Background: Data Engineering, Healthcare IT, Inclusive Technology  
+- [LinkedIn](https://www.linkedin.com/in/sonalichandra) | [GitHub](https://github.com/Sonali222)  
+
 
 
