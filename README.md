@@ -57,19 +57,43 @@ The system is organized into the following layers:
 
 ## Project Structure
 
-```text
 inclusive-job-matcher/
 │
-├── Home.py                # Intro page
-├── 1_User_Profile.py      # Profile form
-├── 2_Recommendations.py   # Recommendation logic
-├── langchain_utils.py     # TTS and memory helpers
-├── requirements.txt       # Dependencies
-├── README.md              # Documentation
-└── data/                  # Job dataset (ignored in git)
+├── Home.py # Intro page
+├── 1_User_Profile.py # Profile form
+├── 2_Recommendations.py # Job recs and resume logic
+├── langchain_utils.py # TTS and memory layers
+├── requirements.txt # Dependencies
+├── accessible_jobs_chicago_cursor.xlsx # Job dataset (ignored in git)
 
 
-## Getting started
+## Getting Started
 
+### Clone the repository
+```bash
+git clone https://github.com/Sonali222/inclusive-job-matcher.git
+cd inclusive-job-matcher
+
+Create a virtual environment (recommended)
+python3 -m venv venv
+source venv/bin/activate   # On Mac/Linux
+venv\Scripts\activate      # On Windows
+
+Install dependencies
+pip install -r requirements.txt
+
+Run the application
+streamlit run Home.py
+(Optional) Add your API keys to .streamlit/secrets.toml.
+
+Future Enhancements
+
+Integration with live job APIs (LinkedIn, Indeed, etc.)
+
+Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud
+
+Employer Inclusivity Score ranking system
+
+Cover letter generator powered by Gemini
 
 
