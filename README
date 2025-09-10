@@ -1,0 +1,105 @@
+🛠 Inclusive Job Matcher — Developer Setup Guide
+This document explains how to set up, run, and modify the Inclusive Job Matcher project.
+
+📋 Prerequisites
+Python 3.10 or higher (we used Python 3.11)
+
+Anaconda (recommended) or any Python environment
+
+Google Gemini API Key
+
+Mac/Linux/Windows (tested on Mac)
+
+📂 Project Folder Structure
+bash
+Copy
+Edit
+InclusiveJobMatcher/
+├── InclusiveJobMatcher.py       # Main app controller (navigation + accessibility settings)
+├── home.py                      # Home page
+├── pages/
+│   ├── 1_User_Profile.py         # Profile form to collect user data
+│   ├── 2_Recommendations.py      # Job recommendations page (uses Gemini API)
+│   ├── 3_Resume_Generator.py     # Resume generation page (uses Gemini API)
+├── accessible_jobs_chicago_cursor.xlsx   # Dataset with job listings
+├── langchain_utils.py            # Text-to-Speech helper and memory functions
+└── .streamlit/
+    └── secrets.toml              # Stores Gemini API key securely
+⚙️ Setup Instructions
+1. Install Required Libraries
+Inside your environment, run:
+
+bash
+Copy
+Edit
+pip install streamlit pandas fpdf google-generativeai
+2. Create .streamlit/secrets.toml
+Inside the project root, create a .streamlit/secrets.toml file with this content:
+
+toml
+Copy
+Edit
+GEMINI_API_KEY = "IzaSyDye-JhDsdJGxqMPZ7LuzoBwJB5Uf_Et5w"
+Note: Keep your Gemini API key private.
+
+3. Run the App
+From inside the project folder:
+
+bash
+Copy
+Edit
+streamlit run InclusiveJobMatcher.py
+This will launch the app in your browser automatically.
+
+🔥 How the App Flows
+InclusiveJobMatcher.py → Handles sidebar, layout, navigation.
+
+User Profile Page → Collects user's background.
+
+Job Recommendations Page → Filters real jobs + passes to Gemini API → displays personalized jobs.
+
+Resume Generator Page → Asks extra inputs → passes everything to Gemini API → generates ATS-friendly resume → PDF download.
+
+Utilities:
+
+Text-to-Speech (optional toggle)
+
+Accessibility (font size, high contrast)
+
+📌 Important Notes
+Job Listings: Stored in accessible_jobs_chicago_cursor.xlsx, loaded dynamically (not hardcoded).
+
+No Database: Entire user profile is stored in streamlit.session_state.
+
+LLM Behavior: Gemini API is stateless — it doesn't "learn" or "store" data between users.
+
+Resume Matching: The resume generator tailors work experience dynamically based on the recommended job descriptions.
+
+🛠 Common Developer Tasks
+
+Task	How
+Update job listings	Replace accessible_jobs_chicago_cursor.xlsx with a new Excel file.
+Change Gemini model	Edit the model call in 2_Recommendations.py and 3_Resume_Generator.py.
+Modify prompt instructions	Update the prompt template in the build_prompt() function.
+Adjust font size / contrast settings	Edit the sidebar radio and CSS styling in InclusiveJobMatcher.py.
+Add more pages (eg. dashboards)	Create a new Python file under /pages/ and update the sidebar nav.
+🙋 FAQ
+
+Question	Answer
+Why Gemini 1.5 Flash?	It's faster, cheaper, and good enough for recommendation/resume generation.
+Why not fine-tune the LLM?	Gemini API does not allow fine-tuning — only prompt engineering.
+Why no database?	For simplicity and portability — session_state is enough for this MVP.
+What happens if there are no good jobs?	Gemini is instructed to explain and recommend fewer jobs if needed.
+⚡ Quick Troubleshooting
+
+Issue	Fix
+ModuleNotFoundError: No module named 'fpdf'	Run pip install fpdf.
+Gemini quota error or timeout	Check API key and project quota on Google Cloud Console.
+Resume PDF Unicode error	Already fixed with sanitization — but make sure no smart quotes or weird characters in input.
+🚀 Final Notes
+Tested on MacBook with Python 3.11 + Streamlit 1.32
+
+Designed for MVP-level delivery, can be extended with databases (Postgres, Firebase) if needed.
+
+Ethical AI principles followed — no real-time scraping, fake applications, or user tracking.
+

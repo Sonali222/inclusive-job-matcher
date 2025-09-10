@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+*.sqlite3
+
+# Streamlit / secrets
+.streamlit/secrets.toml
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Data & large artifacts (keep datasets out of git)
+data/
+*.csv
+*.xlsx
+*.parquet
+*.pickle
+*.pkl
+*.joblib
+logs/
+*.log
+
+# Notebooks (optional – keep if you want them)
+*.ipynb_checkpoints/
