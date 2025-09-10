@@ -4,6 +4,19 @@ An AI-powered, accessibility-first job recommendation platform that helps people
 
 ---
 
+## Table of Contents
+1. [Project Overview](#project-overview)  
+2. [Problem Statement](#problem-statement)  
+3. [Solution](#solution)  
+4. [Architecture](#architecture)  
+5. [Tech Stack](#tech-stack)  
+6. [Project Structure](#project-structure)  
+7. [Getting Started](#getting-started)  
+8. [Future Enhancements](#future-enhancements)  
+9. [About the Author](#about-the-author)  
+
+---
+
 ## Project Overview
 
 Finding jobs that truly consider accessibility needs is a challenge for many people with disabilities.  
@@ -36,30 +49,34 @@ Our platform addresses these challenges by:
 
 ## Architecture
 
+The system is organized into the following layers:
+
+1. **User Interface (Streamlit Frontend)** – Home page, profile form, recommendations, and resume generator  
+2. **AI Layer (Gemini LLM)** – Filters job postings and generates tailored resumes  
+3. **Data Layer** – Accessible job dataset stored in Excel/CSV (future: database integration)  
+4. **Application Tracker** – Records job application status using CSV or Google Sheets  
+
+---
+
+## Tech Stack
+
+- **Frontend**: Streamlit  
+- **Backend/Logic**: Python, Gemini LLM, LangChain  
+- **Data**: Curated accessible job dataset (Excel/CSV)  
+- **Infrastructure (future)**: AWS (Lambda, RDS, S3)  
+- **Other Tools**: Pandas, GitHub for version control  
+
+---
+
+## Project Structure
+
 ```text
-       ┌───────────┐
-       │   User     │
-       └─────┬─────┘
-             │
-    Streamlit Frontend
- (Home, Profile, Recommender, Resume)
-             │
-             ▼
-     ┌───────────────┐
-     │ Gemini API     │
-     │ (LLM Filtering │
-     │  & Resume Gen) │
-     └─────┬─────────┘
-           │
- ┌───────────┴───────────┐
- │   Data Layer           │
- │   (accessible_jobs_    │
- │   chicago_cursor.xlsx) │
- └───────────┬───────────┘
-             │
-             ▼
-     ┌───────────────┐
-     │ Application    │
-     │ Tracker (CSV/  │
-     │ Google Sheets) │
-     └───────────────┘
+inclusive-job-matcher/
+│
+├── Home.py                # Intro page
+├── 1_User_Profile.py      # Profile form
+├── 2_Recommendations.py   # Recommendation logic
+├── langchain_utils.py     # TTS and memory helpers
+├── requirements.txt       # Dependencies
+├── README.md              # Documentation
+└── data/                  # Job dataset (ignored in git)
