@@ -68,41 +68,8 @@ inclusive-job-matcher/
 ├── README.md              # Documentation
 └── data/                  # Job dataset (ignored in git)
 
-Getting Started
+## Getting Started
 
-Clone the repository
-
-git clone https://github.com/Sonali222/inclusive-job-matcher.git
-cd inclusive-job-matcher
-
-
-Create a virtual environment (recommended)
-
-python3 -m venv venv
-source venv/bin/activate   # On Mac/Linux
-venv\Scripts\activate      # On Windows
-
-
-Install dependencies
-
-pip install -r requirements.txt
-
-
-Run the application
-
-streamlit run Home.py
-
-
-(Optional) Add your API keys to .streamlit/secrets.toml.
-
-Future Enhancements
-
-Integration with live job APIs (LinkedIn, Indeed, etc.)
-
-Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud
-
-Employer "Inclusivity Score" ranking system
-
-Cover letter generator powered by Gemini
+1. Clone the repository 
 
 
