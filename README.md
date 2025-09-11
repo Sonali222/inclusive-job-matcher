@@ -63,24 +63,23 @@ python3 -m venv venv
 source venv/bin/activate   # On Mac/Linux
 venv\Scripts\activate      # On Windows
 
-**### 2. Install Dependencies**
+### 2. Install Dependencies
+
 ```
 pip install -r requirements.txt
 ```
 
-**3. Run the Application**
+## 3. Run the Application
+
 ```
 streamlit run Home.py
 ```
-**Future Enhancements
+## Future Enhancements 
 
-Integration with live job APIs (LinkedIn, Indeed, etc.)
-
-Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud
-
-Employer Inclusivity Score ranking system
-
-Cover letter generator powered by Gemini**
+- Integration with live job APIs (LinkedIn, Indeed, etc.)
+- Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud
+- Employer Inclusivity Score ranking system
+- Cover letter generator powered by Gemini
 
 
 
