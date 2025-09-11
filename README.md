@@ -54,6 +54,33 @@ folder/
 ├── file2.py
 ```
 
-## Next Section
-Hello World
+
+## Getting Started
+
+### 1. Create a Virtual Environment (recommended)
+```bash
+python3 -m venv venv
+source venv/bin/activate   # On Mac/Linux
+venv\Scripts\activate      # On Windows
+
+**### 2. Install Dependencies**
+```
+pip install -r requirements.txt
+```
+
+**3. Run the Application**
+```
+streamlit run Home.py
+```
+**Future Enhancements
+
+Integration with live job APIs (LinkedIn, Indeed, etc.)
+
+Deployment on AWS (Lambda, RDS, S3) or Streamlit Cloud
+
+Employer Inclusivity Score ranking system
+
+Cover letter generator powered by Gemini**
+
+
 
