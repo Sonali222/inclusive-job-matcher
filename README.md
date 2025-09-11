@@ -49,9 +49,13 @@ The system is organized into the following layers:
 ## Project Structure
 
 ```
-folder/
-├── file1.py
-├── file2.py
+│
+├── Home.py # Intro page
+├── 1_User_Profile.py # Profile form
+├── 2_Recommendations.py # Job recs and resume logic
+├── langchain_utils.py # TTS and memory layers
+├── requirements.txt # Dependencies
+├── accessible_jobs_chicago_cursor.xlsx # Job dataset (ignored in git)
 ```
 
 
